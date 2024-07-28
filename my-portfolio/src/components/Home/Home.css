@@ -9,8 +9,9 @@
 }
 
 .background-ele {
+	width: 100%;
 	background-color: black;
-	opacity: 0.2;
+	opacity: 0.4;
 	position: absolute;
 	transform: rotate(90deg);
 	z-index: 0;

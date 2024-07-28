@@ -7,6 +7,7 @@
 	gap: 1rem;
 	padding: 2rem 2rem;
 	border-bottom: solid 6px var(--accent-light-clr);
+	background-color: var(--secondary-clr);
 }
 
 .skills-content {
@@ -18,7 +19,7 @@
 	min-width: 86%;
 	min-height: 70%;
 	border-radius: 14px;
-	background-color: var(--secondary-clr);
+	background-color: var(--primary-clr);
 	position: relative;
 }
 
