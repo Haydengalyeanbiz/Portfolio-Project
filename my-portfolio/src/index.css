@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+:root {
+	--ff-headers: 'Oxanium', sans-serif;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	--fs-small: 16px;
+	--fs-medium: 24px;
+	--fs-large: 40px;
+	--fs-xlarge: 70px;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #211951;
+	--primary-clr: #211951;
+	--secondary-clr: #150050;
+	--accent-dark-clr: #836fff;
+	--accent-light-clr: #15f5ba;
+	--text-color: #f0f3ff;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+	color: var(--text-color);
+}
+
+h1 {
+	font-family: var(--ff-headers);
+	font-size: var(--fs-xlarge);
+	line-height: 1.1;
+	text-decoration: underline var(--accent-light-clr);
+	margin: 0;
+}
+
+p {
+	font-size: var(--fs-small);
+}
+
+a {
+	font-family: var(--ff-headers);
+	text-decoration: none;
+	color: var(--text-color);
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+li {
+	list-style: none;
+}

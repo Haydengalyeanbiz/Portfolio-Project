@@ -1,0 +1,45 @@
+.about-me-wrapper {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding: 2rem 3rem;
+	background-color: var(--secondary-clr);
+	border-bottom: solid 6px var(--accent-light-clr);
+}
+
+.about-content-holder {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 2rem;
+	padding: 1rem 2rem;
+	border-radius: 14px;
+	background-color: var(--primary-clr);
+	border: solid 6px var(--accent-light-clr);
+}
+
+.about-title {
+	text-align: left;
+}
+
+.my-story {
+	display: flex;
+	justify-content: center;
+	font-style: italic;
+}
+
+.about-words-wrapper {
+	padding: 1rem 2rem;
+}
+
+.about-me p {
+	text-align: center;
+	max-width: 45dvw;
+}
+
+.animation1 {
+	display: flex;
+	align-items: center;
+}

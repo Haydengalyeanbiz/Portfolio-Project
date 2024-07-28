@@ -1,0 +1,46 @@
+/* MAIN PAGE */
+
+.app-body-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+/* NAVBAR CSS */
+
+.navbar-wrapper {
+	z-index: 100000;
+	width: 100dvw;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	border-bottom: solid 4px var(--accent-light-clr);
+	background-color: var(--secondary-clr);
+}
+
+.navbar-holder {
+	display: flex;
+	gap: 3rem;
+	justify-content: space-between;
+}
+
+.navbar-ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0;
+	gap: 4rem;
+	width: fit-content;
+	margin: 0;
+}
+
+.navbar-ul li .selected {
+	color: var(--accent-light-clr);
+	opacity: 1;
+}
+
+/* APP COMPONENTS */
+
+.app-components-wrapper {
+	padding: 57px 0 0 0;
+	background-color: var(--primary-clr);
+}

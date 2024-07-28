@@ -1,0 +1,13 @@
+.socials-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.socials-ul {
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	align-items: center;
+	padding-left: 0;
+}
