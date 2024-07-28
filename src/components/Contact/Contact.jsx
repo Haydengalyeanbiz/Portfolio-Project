@@ -24,10 +24,10 @@ const Contact = () => {
 
 		emailjs
 			.send(
-				'service_fm6qxl6',
-				'template_t0she8l',
+				process.env.REACT_APP_EMAILJS_SERVICE_ID,
+				process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
 				formData,
-				'QFScXBCwiLniRnXH_'
+				process.env.REACT_APP_EMAILJS_USER_ID
 			)
 			.then(
 				(result) => {
