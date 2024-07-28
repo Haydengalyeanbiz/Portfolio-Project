@@ -7,7 +7,7 @@ import Projects from './components/Projects/Projects.jsx';
 import Contact from './components/Contact/Contact.jsx';
 import { Skills } from './components/Skills/Skills.jsx';
 import { SocialsItem } from './components/SocialsItem/SocialsItem.jsx';
-
+import { Footer } from './components/Footer/Footer.jsx';
 function App() {
 	const [selected, setSelected] = useState('home');
 
@@ -117,6 +117,9 @@ function App() {
 					<section id='contact'>
 						<Contact />
 					</section>
+					<footer>
+						<Footer />
+					</footer>
 				</motion.div>
 			</div>
 		</>

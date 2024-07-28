@@ -28,7 +28,7 @@
 .about-img-div img {
 	max-width: 100%;
 	border: solid 6px var(--accent-light-clr);
-	border-radius: 14px;
+	border-radius: 50%;
 }
 
 .my-story {

@@ -19,7 +19,7 @@ export const SocialsItem = () => {
 				</motion.li>
 				<motion.li>
 					<Link
-						to='https://linkedin.com'
+						to='https://www.linkedin.com/in/hayden-galyean-42a518189'
 						target='_blank'
 						rel='noopener noreferrer'
 					>

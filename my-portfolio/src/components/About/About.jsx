@@ -38,9 +38,9 @@ const About = () => {
 								My journey into web development began when I purchased my first
 								Udemy course in 2019. Since then, I've been dedicated to
 								learning and evolving my skill set. I'm proficient in
-								technologies such as React, HTML, CSS, JavaScript, SQL, and I
-								enjoy working on projects that challenge me to think creatively
-								and solve complex problems.
+								technologies such as React, HTML, CSS, JavaScript, Python, SQL,
+								and I enjoy working on projects that challenge me to think
+								creatively and solve complex problems.
 							</p>
 						</Reveal>
 					</div>

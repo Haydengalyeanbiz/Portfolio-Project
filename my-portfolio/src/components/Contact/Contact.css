@@ -2,8 +2,65 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 90dvh;
+	height: auto;
 	gap: 1rem;
-	padding: 2rem 2rem;
+	padding: 1rem 2rem 2rem;
 	border-bottom: solid 6px var(--accent-light-clr);
+}
+
+.contact-holder {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.contact-message p {
+	max-width: 800px;
+}
+
+.contact-form {
+	width: 100%;
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
+	border: solid 6px var(--accent-light-clr);
+	border-radius: 14px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group label {
+	margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+	padding: 0.5rem;
+	border: 1px solid var(--accent-light-clr);
+	border-radius: 4px;
+	background-color: var(--secondary-clr);
+}
+
+.form-group textarea {
+	height: 150px;
+}
+
+button {
+	padding: 0.75rem;
+	border: none;
+	border-radius: 4px;
+	background-color: var(--accent-dark-clr);
+	color: var(--accent-light-clr);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	color: var(--accent-dark-clr);
+	background-color: var(--accent-light-clr);
 }

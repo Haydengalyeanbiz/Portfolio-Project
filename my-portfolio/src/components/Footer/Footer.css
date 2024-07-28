@@ -1,0 +1,13 @@
+.footer-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.foot-hold {
+	display: flex;
+	gap: 2rem;
+}
+
+.foot-hold p {
+	opacity: 0.5;
+}
