@@ -65,14 +65,6 @@ function App() {
 									Home
 								</motion.a>
 							</motion.li>
-							<motion.li onClick={() => handleSetSelected('about')}>
-								<motion.a
-									id='nav-a'
-									className={selected === 'about' ? 'selected' : ''}
-								>
-									About
-								</motion.a>
-							</motion.li>
 							<motion.li onClick={() => handleSetSelected('skills')}>
 								<motion.a
 									id='nav-a'
@@ -87,6 +79,14 @@ function App() {
 									className={selected === 'projects' ? 'selected' : ''}
 								>
 									Projects
+								</motion.a>
+							</motion.li>
+							<motion.li onClick={() => handleSetSelected('about')}>
+								<motion.a
+									id='nav-a'
+									className={selected === 'about' ? 'selected' : ''}
+								>
+									About
 								</motion.a>
 							</motion.li>
 							<motion.li onClick={() => handleSetSelected('contact')}>
@@ -105,14 +105,14 @@ function App() {
 					<section id='home'>
 						<Home />
 					</section>
-					<section id='about'>
-						<About />
-					</section>
 					<section id='skills'>
 						<Skills />
 					</section>
 					<section id='projects'>
 						<Projects />
+					</section>
+					<section id='about'>
+						<About />
 					</section>
 					<section id='contact'>
 						<Contact />

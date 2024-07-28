@@ -3,13 +3,13 @@ import './Home.css';
 import Reveal from '../Reveal/Reveal';
 import { motion } from 'framer-motion';
 import Lottie from 'react-lottie';
-import backgroundAnimation from '../../lotties/background.json';
+import DotAnimation from '../../lotties/dots.json';
 
 const Home = () => {
 	const defaultOptions = {
 		loop: true,
 		autoplay: true,
-		animationData: backgroundAnimation,
+		animationData: DotAnimation,
 		rendererSettings: {
 			preserveAspectRatio: 'xMidYMid slice',
 		},
@@ -23,7 +23,6 @@ const Home = () => {
 					height='100%'
 					width='100%'
 					isClickToPauseDisabled={true}
-					speed={0.3}
 				/>
 			</div>
 			<div className='background-image'>

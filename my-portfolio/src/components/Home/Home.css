@@ -9,11 +9,10 @@
 }
 
 .background-ele {
-	width: 100%;
+	transform: rotate(90deg);
 	background-color: black;
 	opacity: 0.4;
 	position: absolute;
-	transform: rotate(90deg);
 	z-index: 0;
 	overflow: hidden; /* Ensure the Lottie animation does not overflow */
 }

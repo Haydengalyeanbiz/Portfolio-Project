@@ -12,6 +12,7 @@
 .about-content-holder {
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	flex-wrap: wrap;
 	gap: 2rem;
 	padding: 1rem 2rem;
@@ -20,8 +21,14 @@
 	border: solid 6px var(--accent-light-clr);
 }
 
-.about-title {
-	text-align: left;
+.about-img-div {
+	max-width: 400px;
+}
+
+.about-img-div img {
+	max-width: 100%;
+	border: solid 6px var(--accent-light-clr);
+	border-radius: 14px;
 }
 
 .my-story {

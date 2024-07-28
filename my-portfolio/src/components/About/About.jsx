@@ -2,36 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Reveal from '../Reveal/Reveal';
 import './About.css';
-import Lottie from 'react-lottie';
-import animationData from '../../lotties/workflow.json';
 
 const About = () => {
-	const defaultOptions = {
-		loop: true,
-		autoplay: true,
-		animationData: animationData,
-		rendererSettings: {
-			preserveAspectRatio: 'xMidYMid slice',
-		},
-	};
 	return (
 		<div className='about-me-wrapper'>
 			<Reveal>
 				<h1 className='about-title'>About Me</h1>
 			</Reveal>
 			<div className='about-content-holder'>
-				<motion.div
-					className='animation1'
-					initial={{ opacity: 0, x: -150 }}
-					animate={{ opacity: 1, x: 0 }}
-					transition={{ duration: 0.5, delay: 0.25 }}
-				>
-					<Lottie
-						options={defaultOptions}
-						height={400}
-						width={400}
+				<div className='about-img-div'>
+					<img
+						src='images/prof.jpg'
+						alt=''
 					/>
-				</motion.div>
+				</div>
 				<div className='about-words-wrapper'>
 					<div className='my-story'>
 						<Reveal>
