@@ -10,6 +10,7 @@ export const SocialsItem = () => {
 			<motion.ul className='socials-ul'>
 				<motion.li>
 					<Link
+						class='social-link'
 						to='https://github.com/Haydengalyeanbiz'
 						target='_blank'
 						rel='noopener noreferrer'
@@ -19,6 +20,7 @@ export const SocialsItem = () => {
 				</motion.li>
 				<motion.li>
 					<Link
+						class='social-link'
 						to='https://www.linkedin.com/in/hayden-galyean-42a518189'
 						target='_blank'
 						rel='noopener noreferrer'

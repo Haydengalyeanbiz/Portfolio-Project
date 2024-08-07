@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Lottie from 'react-lottie';
 import DotAnimation from '../../lotties/dots.json';
 
-const Home = () => {
+const Home = ({ handleSetSelected }) => {
 	const defaultOptions = {
 		loop: true,
 		autoplay: true,
@@ -44,6 +44,7 @@ const Home = () => {
 				<div className='button-holder'>
 					<motion.button
 						className='button'
+						onClick={() => handleSetSelected('contact')}
 						animate={{
 							boxShadow: [
 								'0px 0px 20px var(--accent-light-clr)',
@@ -60,7 +61,12 @@ const Home = () => {
 					>
 						Contact Me
 					</motion.button>
-					<motion.button className='button work-btn'>My Work</motion.button>
+					<motion.button
+						className='button work-btn'
+						onClick={() => handleSetSelected('projects')}
+					>
+						My Work
+					</motion.button>
 				</div>
 			</div>
 		</div>

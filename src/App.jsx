@@ -1,3 +1,4 @@
+// App.jsx
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
@@ -8,6 +9,7 @@ import Contact from './components/Contact/Contact.jsx';
 import { Skills } from './components/Skills/Skills.jsx';
 import { SocialsItem } from './components/SocialsItem/SocialsItem.jsx';
 import { Footer } from './components/Footer/Footer.jsx';
+
 function App() {
 	const [selected, setSelected] = useState('home');
 
@@ -45,9 +47,14 @@ function App() {
 
 	const handleSetSelected = (section) => {
 		setSelected(section);
-		document.getElementById(section).scrollIntoView({
+		const navbarHeight = document.querySelector('.navbar-wrapper').offsetHeight;
+		const element = document.getElementById(section);
+		const offset =
+			element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+		window.scrollTo({
+			top: offset,
 			behavior: 'smooth',
-			block: 'start',
 		});
 	};
 
@@ -103,7 +110,7 @@ function App() {
 				</nav>
 				<motion.div className='app-components-wrapper'>
 					<section id='home'>
-						<Home />
+						<Home handleSetSelected={handleSetSelected} />
 					</section>
 					<section id='skills'>
 						<Skills />
