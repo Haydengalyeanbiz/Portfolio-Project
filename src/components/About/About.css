@@ -6,6 +6,7 @@
 	gap: 1rem;
 	padding: 2rem 3rem;
 	background-color: var(--secondary-clr);
+	border-top: solid 6px var(--accent-light-clr);
 	border-bottom: solid 6px var(--accent-light-clr);
 }
 

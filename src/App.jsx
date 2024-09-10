@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
@@ -9,6 +8,7 @@ import Contact from './components/Contact/Contact.jsx';
 import { Skills } from './components/Skills/Skills.jsx';
 import { SocialsItem } from './components/SocialsItem/SocialsItem.jsx';
 import { Footer } from './components/Footer/Footer.jsx';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 function App() {
 	const [selected, setSelected] = useState('home');
@@ -63,6 +63,9 @@ function App() {
 			<div className='app-body-wrapper'>
 				<nav className='navbar-wrapper'>
 					<div className='navbar-holder'>
+						<button>
+							<GiHamburgerMenu />
+						</button>
 						<motion.ul className='navbar-ul'>
 							<motion.li onClick={() => handleSetSelected('home')}>
 								<motion.a

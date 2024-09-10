@@ -18,8 +18,6 @@ const getDefaultOptions = (animationData) => ({
 });
 
 export const Skills = () => {
-	const [hoveredSkill, setHoveredSkill] = useState(null);
-
 	const skills = [
 		{
 			name: 'JavaScript',
@@ -87,37 +85,34 @@ export const Skills = () => {
 				{skills.map((skill, index) => (
 					<motion.div
 						key={index}
-						className='skill'
-						onHoverStart={() => setHoveredSkill(index)}
-						onHoverEnd={() => setHoveredSkill(null)}
+						className='skill-container'
 						animate={{
-							opacity:
-								hoveredSkill === null || hoveredSkill === index ? 1 : 0.5,
-							scale: hoveredSkill === index ? 1.1 : 1,
+							opacity: 1,
+							scale: 1,
 						}}
-						layout
 						transition={{
-							opacity: { duration: 0.3 },
-							layout: { duration: 0.3, ease: 'easeInOut' },
-							scale: { duration: 0.3, ease: 'easeOut' },
+							duration: 0.3,
+							ease: 'easeInOut',
 						}}
 						style={{
-							flexDirection: 'column',
+							display: 'flex',
 							alignItems: 'center',
+							padding: '1rem 0',
 						}}
 					>
-						<Reveal>{skill.animation}</Reveal>
-						{hoveredSkill === index && (
-							<motion.div
-								className='skill-info'
-								initial={{ opacity: 0 }}
-								animate={{ opacity: 1 }}
-								transition={{ duration: 0.5 }}
-							>
-								<h3>{skill.name}</h3>
-								<p>{skill.description}</p>
-							</motion.div>
-						)}
+						<div
+							className='skill-animation'
+							style={{ flex: 1 }}
+						>
+							{skill.animation}
+						</div>
+						<div
+							className='skill-description'
+							style={{ flex: 2 }}
+						>
+							<h3>{skill.name}</h3>
+							<p>{skill.description}</p>
+						</div>
 					</motion.div>
 				))}
 			</div>

@@ -38,6 +38,47 @@
 	opacity: 1;
 }
 
+/* Hamburger menu hidden by default on larger screens */
+.navbar-wrapper button {
+	display: none;
+}
+
+/* Show hamburger menu on smaller screens and hide the nav items */
+@media (max-width: 375px) {
+	.navbar-holder {
+		justify-content: space-between;
+	}
+
+	/* Show hamburger menu */
+	.navbar-wrapper button {
+		display: block;
+		background: none;
+		border: none;
+		font-size: 2rem;
+		cursor: pointer;
+		color: var(--accent-light-clr);
+	}
+
+	/* Hide the full navbar list */
+	.navbar-ul {
+		display: none;
+	}
+
+	/* Show the menu when it's toggled open */
+	.navbar-ul.open {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: var(--secondary-clr);
+		border-top: solid 4px var(--accent-light-clr);
+		padding: 1rem 0;
+		gap: 2rem;
+	}
+}
+
 /* APP COMPONENTS */
 
 .app-components-wrapper {
