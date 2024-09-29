@@ -67,6 +67,15 @@ const Home = ({ handleSetSelected }) => {
 					>
 						My Work
 					</motion.button>
+					<motion.button className='download-link'>
+						<a
+							href='/resume/HaydenGalyeanResumeRevised.pdf'
+							download='HaydenGalyeanResumeRevised.pdf'
+							className='inside-btn'
+						>
+							Download Resume
+						</a>
+					</motion.button>
 				</div>
 			</div>
 		</div>

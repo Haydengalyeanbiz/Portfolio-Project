@@ -25,10 +25,10 @@ const About = () => {
 					<div className='about-me div1'>
 						<Reveal>
 							<p>
-								Hello! I'm Hayden Galyean, a passionate web developer with a
+								Hello! I'm Hayden Galyean, a passionate Software Engineer with a
 								knack for creating engaging and dynamic user experiences. With a
-								background in Front-End Web Development, I have honed my skills
-								in both front-end and back-end development.
+								background in Full Stack Software Engineer, I have honed my
+								skills in both front-end and back-end development.
 							</p>
 						</Reveal>
 					</div>

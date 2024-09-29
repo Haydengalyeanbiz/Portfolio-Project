@@ -89,3 +89,21 @@
 .work-btn {
 	background-color: var(--secondary-clr);
 }
+
+.download-link {
+	opacity: 1;
+	border-radius: 14px;
+	border: solid 3px var(--accent-light-clr);
+}
+
+.download-link:hover {
+	.inside-btn {
+		color: var(--accent-dark-clr);
+	}
+}
+
+.inside-btn {
+	color: var(--accent-light-clr);
+	opacity: 1;
+	font-size: var(--fs-small);
+}
