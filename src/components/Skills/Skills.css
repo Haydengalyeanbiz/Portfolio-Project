@@ -3,24 +3,29 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 70dvh;
+	height: 30dvh;
 	gap: 1rem;
 	padding: 2rem 2rem;
 	border-bottom: solid 6px var(--accent-light-clr);
 	background-color: var(--secondary-clr);
 }
 
+.skills-carousel {
+	width: 100%;
+	overflow: hidden;
+}
+
 .skills-content {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 2rem;
-	border: solid 6px var(--accent-light-clr);
-	min-width: 86%;
-	min-height: 70%;
-	border-radius: 14px;
-	background-color: var(--primary-clr);
-	position: relative;
+
+	gap: 20px;
+
+	/* position: relative; */
+}
+
+.skills-group {
+	display: flex;
+	gap: 20px; /* Adjust spacing between badges */
 }
 
 .skill {

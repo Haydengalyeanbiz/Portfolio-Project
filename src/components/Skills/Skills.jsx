@@ -1,121 +1,91 @@
-import React, { useState } from 'react';
 import Reveal from '../Reveal/Reveal';
-import Lottie from 'react-lottie';
 import { motion } from 'framer-motion';
-import JavascriptAnimation from '../../lotties/js.json';
-import PythonAnimation from '../../lotties/python.json';
-import CssAnimation from '../../lotties/css.json';
-import react from '../../assets/react.svg';
 import './Skills.css';
 
-const getDefaultOptions = (animationData) => ({
-	loop: true,
-	autoplay: true,
-	animationData: animationData,
-	rendererSettings: {
-		preserveAspectRatio: 'xMidYMid slice',
-	},
-});
-
 export const Skills = () => {
-	const skills = [
-		{
-			name: 'JavaScript',
-			description:
-				'I use JavaScript for web development, enabling interactive and dynamic content. Using JavaScript I can create back-end routes and manipulate front-end DOM elements.',
-			animation: (
-				<Lottie
-					options={getDefaultOptions(JavascriptAnimation)}
-					height={100}
-					width={100}
-				/>
-			),
+	const carouselVariants = {
+		animate: {
+			x: [0, -1000],
+			transition: {
+				x: {
+					repeat: Infinity,
+					repeatType: 'loop',
+					duration: 20,
+					ease: 'linear',
+				},
+			},
 		},
-		{
-			name: 'React',
-			description:
-				'Using React and Redux, I build dynamic and responsive web applications. I focus on creating seamless user experiences with efficient state management.',
-			animation: (
-				<motion.img
-					style={{ height: 80, padding: '1rem' }}
-					src={react}
-					alt='React'
-					animate={{ rotate: 360 }}
-					transition={{
-						repeat: Infinity,
-						repeatType: 'loop',
-						duration: 10,
-						ease: 'linear',
-					}}
-				/>
-			),
-		},
-		{
-			name: 'Python',
-			description:
-				'I use Python for developing robust back-end systems and automating tasks. Its extensive libraries allow me to handle data processing and web development efficiently.',
-			animation: (
-				<Lottie
-					options={getDefaultOptions(PythonAnimation)}
-					height={120}
-					width={120}
-				/>
-			),
-		},
-		{
-			name: 'CSS',
-			description:
-				'CSS is essential for designing visually appealing and user-friendly web pages. I use it to customize layouts, animations, and ensure a responsive design across devices.',
-			animation: (
-				<Lottie
-					options={getDefaultOptions(CssAnimation)}
-					height={100}
-					width={100}
-				/>
-			),
-		},
-	];
-
+	};
 	return (
-		<div className='skills-wrapper'>
+		<motion.div className='skills-wrapper'>
 			<Reveal>
-				<h1>My Skills</h1>
+				<h2>My Skills</h2>
 			</Reveal>
-			<div className='skills-content'>
-				{skills.map((skill, index) => (
-					<motion.div
-						key={index}
-						className='skill-container'
-						animate={{
-							opacity: 1,
-							scale: 1,
-						}}
-						transition={{
-							duration: 0.3,
-							ease: 'easeInOut',
-						}}
-						style={{
-							display: 'flex',
-							alignItems: 'center',
-							padding: '1rem 0',
-						}}
-					>
+			<div className='skills-carousel'>
+				{/* The motion div below is animated */}
+				<motion.div
+					className='skills-content'
+					variants={carouselVariants}
+					animate='animate'
+				>
+					{/* Repeat the badges to create the infinite loop illusion */}
+					{[...Array(2)].map((_, i) => (
 						<div
-							className='skill-animation'
-							style={{ flex: 1 }}
+							key={i}
+							className='skills-group'
 						>
-							{skill.animation}
+							<img
+								src='https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB'
+								alt='React Badge'
+							/>
+							<img
+								src='https://img.shields.io/badge/Redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white'
+								alt='Redux Badge'
+							/>
+							<img
+								src='https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black'
+								alt='Javascript Badge'
+							/>
+							<img
+								src='https://img.shields.io/badge/Vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white'
+								alt='Vite Badge'
+							/>
+							<img
+								src='https://img.shields.io/badge/HTML-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white'
+								alt='HTML Badge'
+							/>
+							<img
+								src='https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white'
+								alt='CSS Badge'
+							/>
+							<img
+								src='https://img.shields.io/badge/Framer_Motion-%23000000.svg?style=for-the-badge&logo=framer&logoColor=white'
+								alt='Framer-Motion Badge'
+							/>
+							<img
+								src='https://img.shields.io/badge/Flask-%23000000.svg?style=for-the-badge&logo=flask&logoColor=white'
+								alt='Flask Badge'
+							/>
+							<img
+								src='https://img.shields.io/badge/FlaskForms-%23000000.svg?style=for-the-badge&logo=flask&logoColor=white'
+								alt='FlaskForms Badge'
+							/>
+							<img
+								src='https://img.shields.io/badge/Express-%23000000.svg?style=for-the-badge&logo=express&logoColor=white'
+								alt='Express Badge'
+							/>
+							<img
+								src='https://img.shields.io/badge/Sequelize-%2300c7b7.svg?style=for-the-badge&logo=sequelize&logoColor=white'
+								alt='Sequelize Badge'
+							/>
+							<img
+								src='https://img.shields.io/badge/Supabase-%233ECF8E.svg?style=for-the-badge&logo=supabase&logoColor=white'
+								alt='Supabase Badge'
+							/>
 						</div>
-						<div
-							className='skill-description'
-							style={{ flex: 2 }}
-						>
-							<h3>{skill.name}</h3>
-							<p>{skill.description}</p>
-						</div>
-					</motion.div>
-				))}
+					))}
+				</motion.div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
