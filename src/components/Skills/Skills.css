@@ -1,4 +1,5 @@
 .skills-wrapper {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -17,13 +18,8 @@
 
 .skills-content {
 	display: flex;
-	gap: 20px;
-	width: 200%;
-}
-
-.skills-group {
-	display: flex;
-	gap: 20px;
+	width: 102%;
+	gap: 35px;
 }
 
 .skill {
