@@ -17,15 +17,13 @@
 
 .skills-content {
 	display: flex;
-
 	gap: 20px;
-
-	/* position: relative; */
+	width: 200%;
 }
 
 .skills-group {
 	display: flex;
-	gap: 20px; /* Adjust spacing between badges */
+	gap: 20px;
 }
 
 .skill {
