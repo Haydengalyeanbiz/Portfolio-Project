@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-	--ff-headers: 'Oxanium', sans-serif;
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	--ff-headers: 'Anton SC', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
@@ -13,12 +13,12 @@
 
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
-	background-color: #211951;
-	--primary-clr: #211951;
-	--secondary-clr: #150050;
-	--accent-dark-clr: #836fff;
-	--accent-light-clr: #15f5ba;
-	--text-color: #f0f3ff;
+	background-color: #000000;
+	--primary-clr: #3e3636;
+	--secondary-clr: #000000;
+	--accent-dark-clr: #000000;
+	--accent-light-clr: #ffd523;
+	--text-color: #f5eded;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;

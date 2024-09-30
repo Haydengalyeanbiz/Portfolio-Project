@@ -2,36 +2,11 @@ import React, { useEffect } from 'react';
 import './Home.css';
 import Reveal from '../Reveal/Reveal';
 import { motion } from 'framer-motion';
-import Lottie from 'react-lottie';
-import DotAnimation from '../../lotties/dots.json';
 
 const Home = ({ handleSetSelected }) => {
-	const defaultOptions = {
-		loop: true,
-		autoplay: true,
-		animationData: DotAnimation,
-		rendererSettings: {
-			preserveAspectRatio: 'xMidYMid slice',
-		},
-	};
-
 	return (
 		<div className='home-wrapper'>
-			<div className='background-ele'>
-				<Lottie
-					options={defaultOptions}
-					height='100%'
-					width='100%'
-					isClickToPauseDisabled={true}
-				/>
-			</div>
-			<div className='background-image'>
-				<motion.img
-					className='main-image'
-					src='/images/main-background.JPEG'
-					alt='Background'
-				/>
-			</div>
+			<div className='background-ele'></div>
 			<div className='home-content'>
 				<div className='home-titles'>
 					<Reveal>

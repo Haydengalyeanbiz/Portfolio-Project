@@ -46,7 +46,7 @@ const Projects = () => {
 	return (
 		<motion.div className='project-wrapper'>
 			<Reveal>
-				<h1>My Projects</h1>
+				<h2>My Projects</h2>
 			</Reveal>
 			<Reveal>
 				<div className='projects-content'>
