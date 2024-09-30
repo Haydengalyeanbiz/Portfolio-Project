@@ -40,6 +40,7 @@
 
 .project-link {
 	font-weight: 800;
+	width: fit-content;
 	color: var(--accent-light-clr);
 	opacity: 1;
 }
@@ -52,15 +53,16 @@
 }
 
 .carousel-button {
-	background-color: #007bff;
+	background-color: var(--accent-dark-clr);
 	color: white;
 	border: none;
 	padding: 0.5rem 1rem;
 	cursor: pointer;
 	border-radius: 5px;
+	border: solid 3px var(--accent-light-clr);
 	transition: background-color 0.3s;
 }
 
 .carousel-button:hover {
-	background-color: #0056b3;
+	background-color: var(--accent-light-clr);
 }

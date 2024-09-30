@@ -5,7 +5,7 @@
 	justify-content: center;
 	align-items: center;
 	height: 30dvh;
-	gap: 1rem;
+	gap: 1.5rem;
 	padding: 2rem 2rem;
 	border-bottom: solid 6px var(--accent-light-clr);
 	background-color: var(--secondary-clr);

@@ -69,7 +69,7 @@ export const Skills = () => {
 	return (
 		<div className='skills-wrapper'>
 			<Reveal>
-				<h2>My Skills</h2>
+				<h1>My Skills</h1>
 			</Reveal>
 			<div className='skills-carousel'>
 				<motion.div

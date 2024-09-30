@@ -10,7 +10,7 @@ const Projects = () => {
 			description:
 				'8Bit is a cutting-edge eCommerce platform designed for gamers and collectors alike. Whether you are browsing for the latest video games or must-have accessories, 8Bit offers a seamless shopping experience. Featuring a sleek, modern interface built with performance and usability in mind, users can explore, review, and purchase their favorite products with ease.',
 			link: 'https://eight-bit-ciqo.onrender.com/',
-			image: '/images/project-images/homepagegif.gif',
+			image: '/images/project-images/8-bit-preview.png',
 		},
 		{
 			title: 'DashDine',
@@ -46,7 +46,7 @@ const Projects = () => {
 	return (
 		<motion.div className='project-wrapper'>
 			<Reveal>
-				<h2>My Projects</h2>
+				<h1>My Projects</h1>
 			</Reveal>
 			<Reveal>
 				<div className='projects-content'>
@@ -59,14 +59,6 @@ const Projects = () => {
 							/>
 							<p className='project-description'>
 								<strong>{title}</strong> - {description}{' '}
-								<a
-									className='project-link'
-									href={link}
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									Check it out
-								</a>
 							</p>
 						</div>
 					</Reveal>
@@ -77,6 +69,14 @@ const Projects = () => {
 						>
 							Previous
 						</button>
+						<a
+							className='project-link'
+							href={link}
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							Check it out
+						</a>
 						<button
 							onClick={handleNext}
 							className='carousel-button'

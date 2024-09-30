@@ -48,7 +48,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 2rem;
+	/* gap: 2rem; */
 	padding: 0 0 0 1rem;
 }
 
@@ -58,7 +58,9 @@
 
 .home-p {
 	font-size: var(--fs-medium);
+	font-family: var(--ff-headers);
 	font-weight: 800;
+	margin: 0.5rem 0 0;
 	padding: 0 0 0 1rem;
 }
 .button-holder {
@@ -78,6 +80,7 @@
 	border-radius: 14px;
 	border: solid 3px var(--accent-light-clr);
 	background-color: var(--accent-dark-clr);
+	font-family: var(--ff-headers);
 }
 
 .work-btn {
