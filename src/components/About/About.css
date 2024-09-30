@@ -18,7 +18,7 @@
 	gap: 2rem;
 	padding: 1rem 2rem;
 	border-radius: 14px;
-	background-color: var(--primary-clr);
+	background-color: var(--accent-dark-clr);
 	border: solid 6px var(--accent-light-clr);
 }
 

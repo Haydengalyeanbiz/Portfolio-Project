@@ -1,6 +1,7 @@
 .footer-wrapper {
 	display: flex;
 	justify-content: center;
+	background-color: var(--accent-dark-clr);
 }
 
 .foot-hold {

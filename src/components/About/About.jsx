@@ -6,9 +6,6 @@ import './About.css';
 const About = () => {
 	return (
 		<div className='about-me-wrapper'>
-			<Reveal>
-				<h1 className='about-title'>About Me</h1>
-			</Reveal>
 			<div className='about-content-holder'>
 				<div className='about-img-div'>
 					<img
@@ -19,7 +16,7 @@ const About = () => {
 				<div className='about-words-wrapper'>
 					<div className='my-story'>
 						<Reveal>
-							<h3>My Story</h3>
+							<h1>My Story</h1>
 						</Reveal>
 					</div>
 					<div className='about-me div1'>
