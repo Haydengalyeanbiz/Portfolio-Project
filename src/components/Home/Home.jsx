@@ -10,7 +10,7 @@ const Home = ({ handleSetSelected }) => {
 			<div className='home-content'>
 				<div className='home-titles'>
 					<Reveal>
-						<h1>I'm Hayden Galyean</h1>
+						<h1 className='main-title'>I'm Hayden Galyean</h1>
 					</Reveal>
 					<Reveal>
 						<p className='home-p'>Your full-stack solution</p>

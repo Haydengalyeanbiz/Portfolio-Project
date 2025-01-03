@@ -40,7 +40,7 @@
 	padding: 1rem 3rem;
 	flex-wrap: wrap;
 	gap: 2rem;
-	z-index: 2; /* Ensure it is above the background image */
+	z-index: 2;
 }
 
 .home-titles {
@@ -69,7 +69,6 @@
 	display: flex;
 	justify-content: start;
 	gap: 1rem;
-	padding-left: 1.5rem;
 }
 
 .button {
@@ -104,4 +103,36 @@
 	color: var(--accent-light-clr);
 	opacity: 1;
 	font-size: var(--fs-small);
+}
+
+@media (max-width: 1200px) {
+	.home-content {
+		gap: 4rem;
+	}
+
+	.home-titles {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items: center;
+	}
+
+	.home-titles h1 {
+		font-size: 56px;
+		text-align: center;
+	}
+
+	.button,
+	.work-btn,
+	.download-link {
+		padding: 0.4rem 1rem;
+	}
+}
+
+@media (max-width: 512px) {
+	.button,
+	.work-btn,
+	.download-link {
+		padding: 0.4rem 1rem;
+	}
 }

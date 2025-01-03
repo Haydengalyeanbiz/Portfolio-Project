@@ -1,9 +1,18 @@
 import Reveal from '../Reveal/Reveal';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import './Skills.css';
 
 // Array of badge URLs
 const badges = [
+	{
+		src: 'https://img.shields.io/badge/Vue.js-%2335495e.svg?style=for-the-badge&logo=vue.js&logoColor=%234FC08D',
+		alt: 'Vue Badge',
+	},
+	{
+		src: 'https://img.shields.io/badge/Vuex-%2335495e.svg?style=for-the-badge&logo=vue.js&logoColor=%234FC08D',
+		alt: 'VueX Badge',
+	},
 	{
 		src: 'https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB',
 		alt: 'React Badge',
@@ -51,49 +60,22 @@ const badges = [
 ];
 
 export const Skills = () => {
-	// Animation variants for seamless looping
-	const carouselVariants = {
-		animate: {
-			x: ['0%', '-100%'], // Scroll from 0% to -100%
-			transition: {
-				x: {
-					repeat: Infinity,
-					repeatType: 'loop',
-					duration: 20, // Adjust the speed here
-					ease: 'linear',
-				},
-			},
-		},
-	};
-
 	return (
 		<div className='skills-wrapper'>
-			<Reveal>
-				<h1>My Skills</h1>
-			</Reveal>
-			<div className='skills-carousel'>
-				<motion.div
-					className='skills-content'
-					variants={carouselVariants}
-					animate='animate'
-				>
-					{badges.map((badge, index) => (
+			<motion.div
+				className='skills-content'
+				transition={{ ease: 'linear' }}
+			>
+				{badges.map((badge, index) => (
+					<Reveal>
 						<img
 							key={index}
 							src={badge.src}
 							alt={badge.alt}
 						/>
-					))}
-					{/* Duplicate the badges for seamless looping */}
-					{badges.map((badge, index) => (
-						<img
-							key={index + badges.length}
-							src={badge.src}
-							alt={badge.alt}
-						/>
-					))}
-				</motion.div>
-			</div>
+					</Reveal>
+				))}
+			</motion.div>
 		</div>
 	);
 };

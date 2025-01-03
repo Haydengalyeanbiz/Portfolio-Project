@@ -6,10 +6,14 @@
 	line-height: 1.5;
 	font-weight: 400;
 
+	--fs-xsmall: 14px;
 	--fs-small: 16px;
 	--fs-medium: 24px;
 	--fs-large: 40px;
 	--fs-xlarge: 70px;
+
+	/* !small screens */
+	--sc-xlarge: 58px;
 
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);

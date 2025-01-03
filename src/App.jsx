@@ -12,6 +12,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 function App() {
 	const [selected, setSelected] = useState('home');
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
 		const observerOptions = {
@@ -58,15 +59,22 @@ function App() {
 		});
 	};
 
+	const toggleMenu = () => {
+		setMenuOpen(!menuOpen); // Toggle the state
+	};
+
 	return (
 		<>
 			<div className='app-body-wrapper'>
 				<nav className='navbar-wrapper'>
 					<div className='navbar-holder'>
-						<button>
+						<button
+							className='menu-button'
+							onClick={toggleMenu}
+						>
 							<GiHamburgerMenu />
 						</button>
-						<motion.ul className='navbar-ul'>
+						<motion.ul className={`navbar-ul ${menuOpen ? 'open' : ''}`}>
 							<motion.li onClick={() => handleSetSelected('home')}>
 								<motion.a
 									id='nav-a'

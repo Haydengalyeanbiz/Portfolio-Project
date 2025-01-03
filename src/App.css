@@ -44,9 +44,13 @@
 }
 
 /* Show hamburger menu on smaller screens and hide the nav items */
-@media (max-width: 375px) {
+@media (max-width: 625px) {
+	.menu-button {
+		padding: 0;
+	}
 	.navbar-holder {
 		justify-content: space-between;
+		align-items: center;
 	}
 
 	/* Show hamburger menu */

@@ -19,7 +19,9 @@
 .skills-content {
 	display: flex;
 	width: 102%;
-	gap: 35px;
+	gap: 1.5rem;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .skill {
@@ -50,4 +52,23 @@
 .skill-info p {
 	margin: 5px 0 0 0;
 	font-size: 0.9rem;
+}
+
+@media (max-width: 510px) {
+	.skills-wrapper {
+		height: auto;
+		justify-content: center;
+		align-items: center;
+	}
+	.skills-content {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 425px) {
+	.skills-content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
