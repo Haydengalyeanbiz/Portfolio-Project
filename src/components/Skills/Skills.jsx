@@ -1,10 +1,13 @@
 import Reveal from '../Reveal/Reveal';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
 import './Skills.css';
 
 // Array of badge URLs
 const badges = [
+	{
+		src: 'https://img.shields.io/badge/Amazon%20API-FF9900.svg?style=for-the-badge&logo=amazon&logoColor=white',
+		alt: 'PAAPI5 badge',
+	},
 	{
 		src: 'https://img.shields.io/badge/Vue.js-%2335495e.svg?style=for-the-badge&logo=vue.js&logoColor=%234FC08D',
 		alt: 'Vue Badge',
@@ -69,6 +72,7 @@ export const Skills = () => {
 				{badges.map((badge, index) => (
 					<Reveal>
 						<img
+							className='skill-item'
 							key={index}
 							src={badge.src}
 							alt={badge.alt}

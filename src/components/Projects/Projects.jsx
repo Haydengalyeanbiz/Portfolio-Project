@@ -1,10 +1,19 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Reveal from '../Reveal/Reveal';
+import { useNavigate } from 'react-router-dom';
 import './Projects.css';
 
 const Projects = () => {
+	const navigate = useNavigate();
 	const projects = [
+		{
+			title: 'IndyMamaDeals',
+			description:
+				'IndyMamaDeals is a personal Amazon affiliate website designed for showcasing and advertising handpicked products. The platform leverages the PAAPI5 Amazon API to retrieve detailed product information using an ASIN (Amazon Serial Number) extracted from affiliate links.',
+			link: 'https://indymamadeals.com/',
+			image: '/images/project-images/amazon-main.png',
+		},
 		{
 			title: '8Bit Gaming',
 			description:
@@ -15,7 +24,7 @@ const Projects = () => {
 		{
 			title: 'DashDine',
 			description:
-				'A application inspired from Uber Eats called DashDine. Built with React, Redux, and Node.js for the backend. It features user authentication, order tracking, and cart functionality.',
+				'A application inspired from Uber Eats called DashDine. Built with React, Redux, and Python Flask for the backend. It features user authentication, order tracking, and cart functionality.',
 			link: 'https://dashdine-0s4v.onrender.com/',
 			image: '/images/project-images/dashdine_home.gif',
 		},
@@ -30,16 +39,8 @@ const Projects = () => {
 
 	const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
-	const handleNext = () => {
-		setCurrentProjectIndex((prevIndex) =>
-			prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-		);
-	};
-
-	const handlePrev = () => {
-		setCurrentProjectIndex((prevIndex) =>
-			prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-		);
+	const goToLink = (url) => {
+		window.location.href = url;
 	};
 
 	const { title, description, link, image } = projects[currentProjectIndex];
@@ -50,40 +51,27 @@ const Projects = () => {
 			</Reveal>
 			<Reveal>
 				<div className='projects-content'>
-					<Reveal>
-						<div className='project-preview'>
+					{projects.map((project, index) => (
+						<div
+							className='project-structure'
+							key={index}
+						>
+							<h3>{project.title}</h3>
 							<img
-								src={image}
-								alt={title}
 								className='project-image'
+								src={project.image}
+								alt=''
 							/>
-							<p className='project-description'>
-								<strong>{title}</strong> - {description}{' '}
-							</p>
+							<p className='project-description'>{project.description}</p>
+							<a
+								className='project-link'
+								href={project.link}
+							>
+								{' '}
+								Check it Out
+							</a>
 						</div>
-					</Reveal>
-					<div className='carousel-controls'>
-						<button
-							onClick={handlePrev}
-							className='carousel-button'
-						>
-							Previous
-						</button>
-						<a
-							className='project-link'
-							href={link}
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							Check it out
-						</a>
-						<button
-							onClick={handleNext}
-							className='carousel-button'
-						>
-							Next
-						</button>
-					</div>
+					))}
 				</div>
 			</Reveal>
 		</motion.div>
